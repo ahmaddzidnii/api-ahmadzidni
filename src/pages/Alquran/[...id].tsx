@@ -4,6 +4,10 @@ import { GetServerSideProps, GetServerSidePropsContext } from 'next';
 import Head from 'next/head';
 import React from 'react';
 
+// BOOTSTRAP 5
+import { Form, InputGroup } from "react-bootstrap";
+import { Badge } from "react-bootstrap";
+
 // Tentukan tipe data yang sesuai dengan respons API
 interface SpesificSurah {
   nomor: number;
@@ -19,7 +23,7 @@ interface SpesificSurahProps {
 }
 
 const DetailSurat: React.FC<SpesificSurahProps> = ({ specificSurah, specificAyat }) => {
-  console.log(specificAyat);
+  // console.log(specificAyat);
   return (
     <>
     <Head>
@@ -27,11 +31,11 @@ const DetailSurat: React.FC<SpesificSurahProps> = ({ specificSurah, specificAyat
     </Head>
     <Layout>
     <div className="mt-5">
-      {specificAyat && specificAyat&& (
+      {specificAyat &&  (
         <div>
           <h2>{specificSurah.namaLatin}</h2>
           <ul>
-            {specificSurah.ayat.map((ayat:any, index:number) => (
+            {specificSurah && specificSurah.ayat.map((ayat:any, index:number) => (
               <li key={index}>{ayat.teksLatin}</li> // Ganti dengan properti yang sesuai untuk teks ayat
             ))}
           </ul>
@@ -50,13 +54,13 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
   const { params } = context;
 
   try {
-    const id = params?.id;
+    const id = params?.id?.[1];
 
-    if (!id) {
+    if (id == undefined || id == '') {
       throw new Error('ID tidak valid');
     }
 
-    const response = await axios.get(`https://equran.id/api/v2/surat/${id}`);
+    const response = await axios.get(`${process.env.QURAN_API_URL}/surat/${id}`);
     const specificSurah: SpesificSurah = response.data.data;
     // Dapatkan data ayat dari specificSurah
     const specificAyat = specificSurah.ayat;

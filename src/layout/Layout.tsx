@@ -1,3 +1,4 @@
+import FooterComponents from '@/components/Footer/FooterComponents';
 import NavbarComponent from '@/components/Navbar/NavbarComponent';
 import React, { ReactNode } from 'react';
 
@@ -15,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </main>
       <footer>
-        <p>Hak Cipta © {new Date().getFullYear()}</p>
+        <FooterComponents/>
       </footer>
     </div>
   );

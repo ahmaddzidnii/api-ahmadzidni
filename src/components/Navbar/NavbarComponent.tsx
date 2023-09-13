@@ -53,9 +53,9 @@ const NavbarComponent = () => {
                 </Link>
               </div>
               <div className="nav-link">
-                <a href="/Alquran/list-surah">
+                <Link href="/Alquran/list-surah">
                   Alquran
-                </a>
+                </Link>
               </div>
               <div className="nav-link">
                 <Link href="/Jadwalsholat/listkota" passHref>

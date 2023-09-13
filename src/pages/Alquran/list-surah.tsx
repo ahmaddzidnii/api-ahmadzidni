@@ -83,7 +83,7 @@ const ListSurah: React.FC<ListSurahProps> = ({ listSurah }) => {
                 }).map((surat) => {
                   return (
                     <div className="col-md-4" key={surat.nomor}>
-                      <a href={`/Alquran/${surat.namaLatin}/${surat.nomor}`} className="card my-3 transisi text-decoration-none">
+                      <Link href={`/Alquran/${surat.namaLatin}/${surat.nomor}`} className="card my-3 transisi text-decoration-none">
                         <div className="card-body">
                           <h3 className="card-title">{surat.namaLatin}</h3>
                           <span className="badge rounded-pill bg-sky-600 p-2">{surat.jumlahAyat} Ayat</span>
@@ -92,7 +92,7 @@ const ListSurah: React.FC<ListSurahProps> = ({ listSurah }) => {
                             {surat.arti} | {surat.tempatTurun}
                           </p>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   );
                 })}

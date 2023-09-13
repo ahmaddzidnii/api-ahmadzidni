@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const FooterComponents = () => {
@@ -7,12 +8,12 @@ const FooterComponents = () => {
      <div className="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
        <div className="row">
          <div className="col-lg-3 mb-3">
-           <a className="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Bootstrap">
+           <Link className="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Bootstrap">
              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="" className="bi bi-heart-fill" viewBox="0 0 16 16">
                <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
              </svg>
              <span className="fs-5 ms-2">Ahmad Zidni</span>
-           </a>
+           </Link>
            <ul className="list-unstyled small">
              <li className="mb-2">Dibuat dengan penuh semangat dan niat yang baik oleh <a className="text-black text-decoration-none" href="https://www.youtube.com/channel/UCUmQyCj8_vpW3sAt3Jd0X2w">Ahmad Zidni.</a></li>
              <li className="mb-2">Semua style disini memakai framework dari <a className="text-black text-decoration-none" href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">React dan Bootstrap</a>.</li>
@@ -22,7 +23,7 @@ const FooterComponents = () => {
          <div className="col-6 col-lg-3 offset-lg-1 mb-3">
            <h5 className="fw-bold text-black">Link Bootstrap</h5>
            <ul className="list-unstyled">
-             <li className="mb-2"><a className="text-black text-decoration-none" href="/">Home</a></li>
+             <li className="mb-2"><Link className="text-black text-decoration-none" href="/">Home</Link></li>
              <li className="mb-2"><a className="text-black text-decoration-none" href="/docs/5.3/">Docs</a></li>
              <li className="mb-2"><a className="text-black text-decoration-none" href="/docs/5.3/examples/">Examples</a></li>
              <li className="mb-2"><a className="text-black text-decoration-none" href="https://icons.getbootstrap.com/">Icons</a></li>

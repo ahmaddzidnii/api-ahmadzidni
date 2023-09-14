@@ -38,7 +38,7 @@ const NavbarComponent = () => {
         fixed='top'
       >
         <Container>
-          <Link href="/" passHref className="text-decoration-none">
+          <Link href="/" shallow className="text-decoration-none">
             <span className="fw-bold fs-4 text-black">ahmadzidni.site</span>
           </Link>
           <Navbar.Toggle
@@ -48,22 +48,22 @@ const NavbarComponent = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto text-center">
               <div className="nav-link">
-                <Link href="/" passHref>
+                <Link href="/" shallow>
                   Home
                 </Link>
               </div>
               <div className="nav-link">
-                <Link href="/Alquran/list-surah">
+                <Link href="/Alquran/list-surah" shallow>
                   Alquran
                 </Link>
               </div>
               <div className="nav-link">
-                <Link href="/Jadwalsholat/listkota" passHref>
+                <Link href="/Jadwalsholat/listkota" shallow>
                   Jadwal Sholat
                 </Link>
               </div>
               <div className="nav-link">
-                <Link href="/Asmaulhusna" passHref>
+                <Link href="/Asmaulhusna" shallow>
                   Asmaul Husna
                 </Link>
               </div>

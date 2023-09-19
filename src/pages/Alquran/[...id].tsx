@@ -1,38 +1,31 @@
+import React, { useRef, useState } from "react";
 import Layout from "@/layout/Layout";
 import axios from "axios";
-import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import Head from "next/head";
-import React from "react";
+
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
+import { SpesificSurahProps } from "@/utils/interface/previewSurah";
+import { Ayat, SpesificSurah } from "@/utils/type/previewSurah";
 
 // BOOTSTRAP 5
 import { Form, InputGroup } from "react-bootstrap";
 import { Badge } from "react-bootstrap";
 
-interface SpesificSurah {
-  nomor: number;
-  nama: string;
-  namaLatin: string;
-  deskripsi: string;
-  tempatTurun: string;
-  suratSebelumnya: any;
-  suratSelanjutnya: any;
-  ayat: any;
-}
-
-interface SpesificSurahProps {
-  specificSurah: SpesificSurah;
-  specificAyat: any;
-}
-
-type Ayat = {
-  nomorAyat: number;
-  teksArab: string;
-  teksLatin: string;
-  teksIndonesia: string;
-  audio: any;
-};
-
 const DetailSurat: React.FC<SpesificSurahProps> = ({ specificSurah, specificAyat }) => {
+  const [isAudioPlaying, setIsAudioPlaying] = useState<boolean>(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const handleAudioPlayPause = () => {
+    const audioElement = audioRef.current;
+
+    if (isAudioPlaying) {
+      audioElement?.pause();
+    } else {
+      audioElement?.play();
+    }
+    setIsAudioPlaying(!isAudioPlaying);
+  };
+
   // console.log(specificSurah.suratSebelumnya);
   return (
     <>
@@ -71,20 +64,20 @@ const DetailSurat: React.FC<SpesificSurahProps> = ({ specificSurah, specificAyat
                 )}
               </div>
               <div className="col-md-4 mb-1">
-                {/* <div>
-                <audio src={surat.audioFull["05"]} ref={audioRef} onPlay={() => setIsAudioPlaying(true)} onPause={() => setIsAudioPlaying(false)}></audio>
-                <button className="btn btn-info w-100" onClick={handleAudioPlayPause}>
-                  {isAudioPlaying ? " ⏹️ Pause Surah" : " ▶️ Play Full Surah"}
-                </button>
+                <div>
+                  <audio src={specificSurah.audioFull["05"]} ref={audioRef} onPlay={() => setIsAudioPlaying(true)} onPause={() => setIsAudioPlaying(false)}></audio>
+                  <button className="btn btn-info w-100" onClick={handleAudioPlayPause}>
+                    {isAudioPlaying ? " ⏹️ Pause Surah" : " ▶️ Play Full Surah"}
+                  </button>
+                </div>
               </div>
-            </div>
-            <div className="col-md-4 mb-1">
+              {/* <div className="col-md-4 mb-1">
             <a href={`/Alquran/tafsir/${surat.nomor}`} className="w-100 btn btn-info me-2">
               📃Tafsir
               </a>
             </div> */}
-              </div>
-              {/* <div className="row mt-3">
+            </div>
+            {/* <div className="row mt-3">
             <form className="subnav-search d-flex flex-nowrap">
               <div className="col">
                 <InputGroup className="form-control p-0">
@@ -96,7 +89,6 @@ const DetailSurat: React.FC<SpesificSurahProps> = ({ specificSurah, specificAyat
               </div>
             </form>
           </div> */}
-            </div>
             <div className="row">
               {specificAyat &&
                 specificAyat.map((ayat: Ayat) => {
@@ -125,16 +117,16 @@ const DetailSurat: React.FC<SpesificSurahProps> = ({ specificSurah, specificAyat
                 })}
             </div>
             <div className="row">
-            <div className="col-md-5 offset-md-7">
-              {
-                specificSurah.suratSelanjutnya != false && <div>
-                  <a href={`/Alquran/${specificSurah.suratSelanjutnya.namaLatin}/${specificSurah.suratSelanjutnya.nomor}`} className="btn btn-info w-100">
-                  {specificSurah.suratSelanjutnya.namaLatin} {specificSurah.suratSelanjutnya.nama} ➡️
-                </a>
-                </div>
-              }
+              <div className="col-md-5 offset-md-7">
+                {specificSurah.suratSelanjutnya != false && (
+                  <div>
+                    <a href={`/Alquran/${specificSurah.suratSelanjutnya.namaLatin}/${specificSurah.suratSelanjutnya.nomor}`} className="btn btn-info w-100">
+                      {specificSurah.suratSelanjutnya.namaLatin} {specificSurah.suratSelanjutnya.nama} ➡️
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
           </div>
         </div>
       </Layout>
@@ -156,7 +148,6 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
 
     const response = await axios.get(`${process.env.QURAN_API_URL}/surat/${id}`);
     const specificSurah: SpesificSurah = response.data.data;
-    // Dapatkan data ayat dari specificSurah
     const specificAyat = specificSurah.ayat;
 
     return {
@@ -171,12 +162,8 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     // Atur data default atau kosong jika terjadi kesalahan
     return {
       props: {
-        specificSurah: {
-          nomor: null,
-          nama: "",
-          namaLatin: "",
-          ayat: [],
-        },
+        specificSurah: [],
+        specificAyat: [],
       },
     };
   }

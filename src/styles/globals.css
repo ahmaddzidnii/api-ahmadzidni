@@ -240,12 +240,8 @@ background-color: rgba(112, 128, 144, 0.073);
 }
 .transisi:hover{
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-
+  transform: scale(1.02);
+ 
 }
 
 

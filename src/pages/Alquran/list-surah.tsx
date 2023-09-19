@@ -1,12 +1,12 @@
-import Layout from "@/layout/Layout";
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import axios from "axios";
 import Head from "next/head";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React, { useState } from "react";
+import Layout from "@/layout/Layout";
 import { Form, InputGroup } from "react-bootstrap";
+import ServerError from "@/layout/ServerError";
+import NotFound from "@/layout/NotFound";
 
-// Component interfaces
 interface Surah {
   nomor: number;
   nama: string;
@@ -23,28 +23,30 @@ interface ListSurahProps {
 const ListSurah: React.FC<ListSurahProps> = ({ listSurah }) => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const router = useRouter();
-  console.log(searchQuery);
+
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key.toLowerCase() === "m" && e.ctrlKey) {
+        const inputSearch = document.getElementById("form");
+        inputSearch?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
-    if (query === ""){
+    if (query === "") {
       router.push(`/Alquran/list-surah`);
-    }
-    if(query){
+    } else {
       router.push(`/Alquran/list-surah/?q=${query}`);
     }
   };
-
-
-  setTimeout(()=>{
-    document.addEventListener('keydown', (e) => {
-      // console.log(e)
-      if (e.key == "m" && e.ctrlKey){
-        const inputSearch = document.getElementById('form');
-        inputSearch?.focus();
-      }
-    })
-  },5000)
 
   return (
     <>
@@ -61,7 +63,7 @@ const ListSurah: React.FC<ListSurahProps> = ({ listSurah }) => {
                     <Form.Control
                       id="form"
                       className="search mb-0 p-3 border-1 border-black"
-                      placeholder="🔎  cari surah atau urutan surat... "
+                      placeholder="🔎  Cari surah atau urutan surat... "
                       onChange={(e) => handleSearch(e.target.value)}
                       value={searchQuery}
                       accessKey="m"
@@ -77,25 +79,33 @@ const ListSurah: React.FC<ListSurahProps> = ({ listSurah }) => {
               </form>
             </div>
             <div className="row">
+              {
+                listSurah.length == 0 && <ServerError/>
+              }
+            </div>
+            <div className="row">
               {listSurah &&
-                listSurah.filter(f =>{
-                  return f.nomor.toString().includes(searchQuery) || f.namaLatin.toLowerCase().includes(searchQuery.toLowerCase())
-                }).map((surat) => {
-                  return (
-                    <div className="col-md-4" key={surat.nomor}>
-                      <Link href={`/Alquran/${surat.namaLatin}/${surat.nomor}`} shallow className="card my-3 transisi text-decoration-none">
-                        <div className="card-body">
-                          <h3 className="card-title">{surat.namaLatin}</h3>
-                          <span className="badge rounded-pill bg-sky-600 p-2">{surat.jumlahAyat} Ayat</span>
-                          <h1 className="card-subtitle mb-2 text-body-secondary text-end">{surat.nama}</h1>
-                          <p className="card-text text-end">
-                            {surat.arti} | {surat.tempatTurun}
-                          </p>
+                listSurah
+                  .filter((f) => f.nomor.toString().includes(searchQuery) || f.namaLatin.toLowerCase().includes(searchQuery.toLowerCase()))
+                  .map((surat) => {
+                    return (
+                      <div className="col-lg-4" key={surat.nomor}>
+                        <div className="card my-3 transisi text-decoration-none">
+                          <div className="card-body">
+                            <h3 className="card-title">{surat.namaLatin}</h3>
+                            <span className="badge rounded-pill bg-sky-600 p-2">{surat.jumlahAyat} Ayat</span>
+                            <h1 className="card-subtitle mb-2 text-body-secondary text-end">{surat.nama}</h1>
+                            <p className="card-text text-end">
+                              {surat.arti} | {surat.tempatTurun}
+                            </p>
+                            <a href={`/Alquran/${surat.namaLatin}/${surat.nomor}`} className="btn-info btn w-100">
+                              Baca Sekarang
+                            </a>
+                          </div>
                         </div>
-                      </Link>
-                    </div>
-                  );
-                })}
+                      </div>
+                    );
+                  })} 
             </div>
           </div>
         </div>
@@ -116,7 +126,7 @@ export const getServerSideProps = async () => {
       },
     };
   } catch (error) {
-    console.error(error);
+    console.error("Error fetching surahs:", error);
     return {
       props: {
         listSurah: [],

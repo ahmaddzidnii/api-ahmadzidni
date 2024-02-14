@@ -51,32 +51,56 @@
         "tags": ["API GET Semua Lokasi"],
         "responses": {
           "200": {
-            "description": "Data Lokasi Kota Berhasil Di Ambil",
+            "description": "OK",
             "content": {
               "application/json": {
                 "example": {
                   "code": 200,
-                  "message": "Data Lokasi Kota Berhasil Di Ambil",
+                  "metadata": {
+                    "path_url": "/v1/shalat/citying"
+                  },
                   "pagination": {
-                    "last_visible_page": 1052,
+                    "last_visible_page": 11,
                     "has_next_page": true,
                     "current_page": 1,
                     "items": {
-                      "count": 25,
-                      "total": 26294,
-                      "per_page": 25
+                      "count": 50,
+                      "total": 518,
+                      "per_page": 50
                     }
                   },
                   "data": [
                     {
-                      "id": "1001",
+                      "id": 1001,
                       "lokasi": "KAB. LAMPUNG TENGAH"
                     },
                     {
-                      "id": "1002",
+                      "id": 1002,
                       "lokasi": "KAB. LAMPUNG UTARA"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": 400,
+                  "error": "limit must be between 20 and 100!"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": 404,
+                  "error": "Page not found!"
                 }
               }
             }

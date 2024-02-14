@@ -43,7 +43,7 @@ export const jadwalController = async (req: Request, res: Response) => {
 
     return res.status(200).json(
       jsonSuccses({
-        code: 200,
+        status_code: 200,
         metadata: {
           path_url: req.originalUrl,
         },

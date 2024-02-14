@@ -1,0 +1,88 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "api.ahmadzidni.site",
+    "version": "1.0.0",
+    "description": "API Spec from api.ahmadzidni.site",
+    "contact": {
+      "name": "Ahmad Zidni",
+      "email": "zdngaming312@gmail.com"
+    },
+    "license": {
+      "name": "APACHE 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.ahmadzidni.site/v1"
+    }
+  ],
+  "externalDocs": {
+    "description": "External Documentation",
+    "url": "docsapi.ahmadzidni.site"
+  },
+  "paths": {
+    "/sholat/city": {
+      "get": {
+        "description": "Get API Spec",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "nullable": true,
+              "default": 50
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "nullable": true,
+              "default": 1
+            }
+          }
+        ],
+        "tags": ["API GET Semua Lokasi"],
+        "responses": {
+          "200": {
+            "description": "Data Lokasi Kota Berhasil Di Ambil",
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": 200,
+                  "message": "Data Lokasi Kota Berhasil Di Ambil",
+                  "pagination": {
+                    "last_visible_page": 1052,
+                    "has_next_page": true,
+                    "current_page": 1,
+                    "items": {
+                      "count": 25,
+                      "total": 26294,
+                      "per_page": 25
+                    }
+                  },
+                  "data": [
+                    {
+                      "id": "1001",
+                      "lokasi": "KAB. LAMPUNG TENGAH"
+                    },
+                    {
+                      "id": "1002",
+                      "lokasi": "KAB. LAMPUNG UTARA"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

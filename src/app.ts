@@ -5,9 +5,10 @@ import cookieparser from "cookie-parser";
 import cors from "cors";
 import { rateLimit } from "express-rate-limit";
 
-import routes from "./routes/route";
 import { notFoundMiddleware } from "./middleware/not-found";
 import { errorMiddleware } from "./middleware/error-middleware";
+
+import jadwalRoute from "./routes/jadwal-route";
 
 const app = express();
 app.set("trust proxy", true);
@@ -55,7 +56,7 @@ app.get("/", async (_req, res, next) => {
   }
 });
 // Apply routes before error handling
-app.use("/v1", routes);
+app.use("/v1/shalat", jadwalRoute);
 
 // Apply error handling last
 app.use(notFoundMiddleware);

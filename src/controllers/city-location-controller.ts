@@ -5,7 +5,7 @@ import { jsonSuccses } from "../templates/json-succses";
 
 import { ResponseLokasi } from "../../types/jadwal";
 
-export const jadwalController = async (req: Request, res: Response) => {
+export const cityLocationController = async (req: Request, res: Response) => {
   const page = Number(req.query.page) || 1;
   const limit = Number(req.query.limit) || 50;
 
@@ -46,6 +46,10 @@ export const jadwalController = async (req: Request, res: Response) => {
         status_code: 200,
         metadata: {
           path_url: req.originalUrl,
+          query_params: {
+            page,
+            limit,
+          },
         },
         pagination: {
           last_visible_page: totalPages,

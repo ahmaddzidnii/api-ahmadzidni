@@ -1,22 +1,19 @@
 import express, { Request, Response } from "express";
+import { rateLimit } from "express-rate-limit";
+
 import morgan from "morgan";
 import helmet from "helmet";
 import cookieparser from "cookie-parser";
 import cors from "cors";
-import { rateLimit } from "express-rate-limit";
-import path from "path";
-import favicon from "serve-favicon";
 
 import { notFoundMiddleware } from "./middleware/not-found";
 import { errorMiddleware } from "./middleware/error-middleware";
 
+import { cache } from "./libs/cache";
+
 import jadwalRoute from "./routes/jadwal-route";
 
 const app = express();
-
-app.use(express.static(path.join(__dirname, "public")));
-
-app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 
 app.set("trust proxy", true);
 
@@ -57,8 +54,9 @@ app.use(morgan("tiny"));
 app.get("/", async (_req, res, next) => {
   res.render("index", { name: "John", title: "api.ahmadzidni.site" });
 });
-// Apply routes before error handling
-app.use("/v1/shalat", jadwalRoute);
+
+// route for jadwal shalat
+app.use("/v1/shalat", cache("5 minutes"), jadwalRoute);
 
 // Apply error handling last
 app.use(notFoundMiddleware);

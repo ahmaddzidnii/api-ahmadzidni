@@ -4,6 +4,8 @@ import helmet from "helmet";
 import cookieparser from "cookie-parser";
 import cors from "cors";
 import { rateLimit } from "express-rate-limit";
+import path from "path";
+import favicon from "serve-favicon";
 
 import { notFoundMiddleware } from "./middleware/not-found";
 import { errorMiddleware } from "./middleware/error-middleware";
@@ -11,7 +13,14 @@ import { errorMiddleware } from "./middleware/error-middleware";
 import jadwalRoute from "./routes/jadwal-route";
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, "public")));
+
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
+
 app.set("trust proxy", true);
+
+app.set("view engine", "ejs");
 
 const keyGenerator = function keyGenerator(
   request: Request,
@@ -46,14 +55,7 @@ app.use(morgan("tiny"));
 
 // root route
 app.get("/", async (_req, res, next) => {
-  try {
-    res.json({
-      message: "Hello World!",
-      NODE_ENV: process.env.NODE_ENV,
-    });
-  } catch (error) {
-    next(error);
-  }
+  res.render("index", { name: "John", title: "api.ahmadzidni.site" });
 });
 // Apply routes before error handling
 app.use("/v1/shalat", jadwalRoute);

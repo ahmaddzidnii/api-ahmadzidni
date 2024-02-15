@@ -4,6 +4,7 @@ import { jsonError } from "../templates/json-error";
 import { jsonSuccses } from "../templates/json-succses";
 
 import { ResponseLokasi } from "../../types/jadwal";
+import { getPath } from "../utils/get-path";
 
 export const cityLocationController = async (req: Request, res: Response) => {
   const page = Number(req.query.page) || 1;
@@ -45,7 +46,7 @@ export const cityLocationController = async (req: Request, res: Response) => {
       jsonSuccses({
         status_code: 200,
         metadata: {
-          path_url: req.originalUrl,
+          path_url: getPath(req),
           query_params: {
             page,
             limit,

@@ -115,7 +115,7 @@ const scheduleMonthController = async (req: Request, res: Response) => {
     );
   } catch (error: any) {
     console.error(error);
-    if (error.response.status == 404) {
+    if (error.response.status == 400) {
       return res
         .status(404)
         .json(jsonError({ code: 404, error: "Data not found" }));

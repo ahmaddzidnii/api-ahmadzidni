@@ -14,6 +14,8 @@ import { cache } from "./libs/cache";
 import jadwalRoute from "./routes/jadwal-route";
 import doaRouter from "./routes/doa-route";
 
+import { api_meta } from "../config";
+
 const app = express();
 
 app.set("trust proxy", true);
@@ -53,7 +55,10 @@ app.use(morgan("tiny"));
 
 // root route
 app.get("/", async (_req, res) => {
-  res.render("index", { name: "John", title: "api.ahmadzidni.site" });
+  res.status(200).json({
+    api_version: api_meta.version,
+    response: "Welcome to API Ahmad Zidni",
+  });
 });
 
 // route for jadwal shalat

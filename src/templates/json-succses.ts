@@ -3,10 +3,10 @@ interface jsonSuccsesProps {
   metadata: {
     path_url: string;
     query_params?: {
-      [key: string]: string | number;
+      [key: string]: string | number | boolean;
     };
     params?: {
-      [key: string]: string | number;
+      [key: string]: any;
     };
   };
   pagination?: {
@@ -23,7 +23,9 @@ interface jsonSuccsesProps {
     | {
         [key: string]: any;
       }[]
-    | {};
+    | {}
+    | undefined
+    | null;
 }
 
 export const jsonSuccses = (fields: jsonSuccsesProps) => {

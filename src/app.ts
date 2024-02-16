@@ -12,6 +12,7 @@ import { errorMiddleware } from "./middleware/error-middleware";
 import { cache } from "./libs/cache";
 
 import jadwalRoute from "./routes/jadwal-route";
+import doaRouter from "./routes/doa-route";
 
 const app = express();
 
@@ -51,12 +52,15 @@ app.use(helmet());
 app.use(morgan("tiny"));
 
 // root route
-app.get("/", async (_req, res, next) => {
+app.get("/", async (_req, res) => {
   res.render("index", { name: "John", title: "api.ahmadzidni.site" });
 });
 
 // route for jadwal shalat
-app.use("/v1/shalat", cache("5 minutes"), jadwalRoute);
+app.use("/v1/shalat", cache("10 minutes"), jadwalRoute);
+
+// route for doa
+app.use("/v1/prayer", cache("10 minutes"), doaRouter);
 
 // Apply error handling last
 app.use(notFoundMiddleware);

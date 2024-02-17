@@ -1,7 +1,7 @@
 import express from "express";
-import { searchLocationController } from "../controllers/search-location-controller";
-import scheduleController from "../controllers/schedule-controller";
-import { cityLocationController } from "../controllers/city-location-controller";
+import { searchLocationController } from "../controllers/jadwal-shalat/search-location-controller";
+import scheduleController from "../controllers/jadwal-shalat/schedule-controller";
+import { cityLocationController } from "../controllers/jadwal-shalat/city-location-controller";
 
 const jadwalRouter = express.Router();
 

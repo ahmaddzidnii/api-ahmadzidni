@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { AxiosApiMyQuran } from "../libs/axios";
+import { AxiosApiMyQuran } from "../../libs/axios";
 import {
   ResponseScheduleDayProps,
   ResponseScheduleMonthProps,
-} from "../../types/jadwal";
-import { jsonError } from "../templates/json-error";
-import { jsonSuccses } from "../templates/json-succses";
+} from "../../../types/jadwal";
+import { jsonError } from "../../templates/json-error";
+import { jsonSuccses } from "../../templates/json-succses";
 
 function formatDate(dateString: string) {
   const [day, month, year] = dateString.split("-").map(Number);

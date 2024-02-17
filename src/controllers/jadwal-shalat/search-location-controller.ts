@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { jsonError } from "../templates/json-error";
-import { jsonSuccses } from "../templates/json-succses";
-import { AxiosApiMyQuran } from "../libs/axios";
-import { ResponseLokasi } from "../../types/jadwal";
+import { jsonError } from "../../templates/json-error";
+import { jsonSuccses } from "../../templates/json-succses";
+import { AxiosApiMyQuran } from "../../libs/axios";
+import { ResponseLokasi } from "../../../types/jadwal";
 
 import Fuse from "fuse.js";
-import { getPath } from "../utils/get-path";
+import { getPath } from "../../utils/get-path";
 
 export const searchLocationController = async (req: Request, res: Response) => {
   const query = req.query.q as string;

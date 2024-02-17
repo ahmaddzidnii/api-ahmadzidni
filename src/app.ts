@@ -66,7 +66,7 @@ app.get("/", async (_req, res) => {
 app.use("/v1/shalat", cache("10 minutes"), jadwalRoute);
 
 // route for doa
-app.use("/v1/prayer", cache("10 minutes"), doaRouter);
+app.use("/v1/prayer", doaRouter);
 
 // route for asmaul husna
 app.use("/v1/asmaul-husna", asmaulHusnaRoute);

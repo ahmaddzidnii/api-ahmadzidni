@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
-import { AxiosApiMyQuran } from "../libs/axios";
-import { jsonError } from "../templates/json-error";
-import { jsonSuccses } from "../templates/json-succses";
+import { AxiosApiMyQuran } from "../../libs/axios";
+import { jsonError } from "../../templates/json-error";
+import { jsonSuccses } from "../../templates/json-succses";
 
-import { ResponseLokasi } from "../../types/jadwal";
-import { getPath } from "../utils/get-path";
+import { ResponseLokasi } from "../../../types/jadwal";
+import { getPath } from "../../utils/get-path";
 
 export const cityLocationController = async (req: Request, res: Response) => {
   const page = Number(req.query.page) || 1;

@@ -16,6 +16,7 @@ import doaRouter from "./routes/doa-route";
 import asmaulHusnaRoute from "./routes/asmaul-husna-route";
 
 import { api_meta } from "../config";
+import commentRoute from "./routes/comment-route";
 
 const app = express();
 
@@ -70,6 +71,9 @@ app.use("/v1/prayer", doaRouter);
 
 // route for asmaul husna
 app.use("/v1/asmaul-husna", asmaulHusnaRoute);
+
+// route for comment
+app.use("/v1/comments", commentRoute);
 
 // Apply error handling last
 app.use(notFoundMiddleware);

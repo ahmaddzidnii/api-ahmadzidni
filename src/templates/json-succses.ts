@@ -1,9 +1,11 @@
 interface jsonSuccsesProps {
   status_code: number;
+  message?: string;
   metadata: {
     path_url: string;
+    method?: string;
     query_params?: {
-      [key: string]: string | number | boolean;
+      [key: string]: any;
     };
     params?: {
       [key: string]: any;
@@ -31,8 +33,10 @@ interface jsonSuccsesProps {
 export const jsonSuccses = (fields: jsonSuccsesProps) => {
   return {
     status_code: fields.status_code,
+    message: fields.message,
     metadata: {
       path: fields.metadata.path_url,
+      method: fields.metadata.method,
       query_params: fields.metadata.query_params,
       params: fields.metadata.params,
     },

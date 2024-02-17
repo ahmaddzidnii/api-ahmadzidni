@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Comment {
+  id         Int      @id @default(autoincrement())
+  name       String   @db.VarChar(255)
+  email      String   @db.VarChar(255)
+  message    String   @db.Text
+  time       Int
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@map("comment")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model asmaul_husna {
+  id             Int
+  latin          String @db.Text
+  arabic         String @db.Text
+  translation_id String @db.Text
+  translation_en String @db.Text
+
+  @@map("asmaul-husna")
+  @@ignore
+}
+
+model doaharian {
+  id          Int    @id @default(autoincrement())
+  title       String @db.Text
+  arabic      String @db.Text
+  latin       String @db.Text
+  translation String @db.Text
+}
+
+model kontak {
+  Tanggal BigInt
+  id      Int    @id @default(autoincrement())
+  nama    String @db.VarChar(255)
+  email   String @db.VarChar(255)
+  pesan   String @db.Text
+}

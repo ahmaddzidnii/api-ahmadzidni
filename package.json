@@ -7,18 +7,19 @@
     "start": "cross-env NODE_ENV=production node build/index.js",
     "dev": "cross-env NODE_ENV=development nodemon src/index.ts",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "prisma generate"
   },
   "author": "Ahmad Zidni Hidayat",
   "license": "MIT",
   "devDependencies": {
+    "@types/apicache": "^1.6.6",
     "@types/cookie-parser": "^1.4.6",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
     "@types/morgan": "^1.9.9",
     "@types/supertest": "^6.0.2",
-    "@types/apicache": "^1.6.6",
     "nodemon": "^3.0.3",
     "supertest": "^6.3.4",
     "ts-jest": "^29.1.2",
@@ -26,6 +27,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@prisma/client": "^5.9.1",
     "apicache": "^1.6.3",
     "axios": "^1.6.7",
     "cookie-parser": "^1.4.6",
@@ -36,6 +38,7 @@
     "express-rate-limit": "^7.1.5",
     "fuse.js": "^7.0.0",
     "helmet": "^7.1.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "prisma": "^5.9.1"
   }
 }

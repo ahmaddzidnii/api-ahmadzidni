@@ -13,6 +13,7 @@ import { cache } from "./libs/cache";
 
 import jadwalRoute from "./routes/jadwal-route";
 import doaRouter from "./routes/doa-route";
+import asmaulHusnaRoute from "./routes/asmaul-husna-route";
 
 import { api_meta } from "../config";
 
@@ -66,6 +67,9 @@ app.use("/v1/shalat", cache("10 minutes"), jadwalRoute);
 
 // route for doa
 app.use("/v1/prayer", cache("10 minutes"), doaRouter);
+
+// route for asmaul husna
+app.use("/v1/asmaul-husna", asmaulHusnaRoute);
 
 // Apply error handling last
 app.use(notFoundMiddleware);

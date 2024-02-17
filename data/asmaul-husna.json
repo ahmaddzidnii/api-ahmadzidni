@@ -1,0 +1,695 @@
+[
+  {
+    "id": 1,
+    "text_latin": "Ar Rahman",
+    "text_ar": "الرحمن",
+    "translate_id": "Yang Maha Pengasih",
+    "slug": "ar-rahman"
+  },
+  {
+    "id": 2,
+    "text_latin": "Ar Rahiim",
+    "text_ar": "الرحيم",
+    "translate_id": "Yang Maha Penyayang",
+    "slug": "ar-rahiim"
+  },
+  {
+    "id": 3,
+    "text_latin": "Al Malik",
+    "text_ar": "الملك",
+    "translate_id": "Yang Maha Merajai / Memerintah",
+    "slug": "al-malik"
+  },
+  {
+    "id": 4,
+    "text_latin": "Al Quddus",
+    "text_ar": "القدوس",
+    "translate_id": "Yang Maha Suci",
+    "slug": "al-quddus"
+  },
+  {
+    "id": 5,
+    "text_latin": "As Salaam",
+    "text_ar": "السلام",
+    "translate_id": "Yang Maha Memberi Kesejahteraan",
+    "slug": "as-salaam"
+  },
+  {
+    "id": 6,
+    "text_latin": "Al Mu 'min",
+    "text_ar": "المؤمن",
+    "translate_id": "Yang Maha Memberi Keamanan",
+    "slug": "al-mu-'min"
+  },
+  {
+    "id": 7,
+    "text_latin": "Al Muhaimin",
+    "text_ar": "المهيمن",
+    "translate_id": "Yang Maha Pemelihara",
+    "slug": "al-muhaimin"
+  },
+  {
+    "id": 8,
+    "text_latin": "Al 'Aziiz",
+    "text_ar": "العزيز",
+    "translate_id": "Yang Maha Perkasa",
+    "slug": "al-'aziiz"
+  },
+  {
+    "id": 9,
+    "text_latin": "Al Jabbar",
+    "text_ar": "الجبار",
+    "translate_id": "Yang Memiliki Mutlak Kegagahan",
+    "slug": "al-jabbar"
+  },
+  {
+    "id": 10,
+    "text_latin": "Al Mutakabbir",
+    "text_ar": "المتكبر",
+    "translate_id": "Yang Maha Megah, Yang Memiliki Kebesaran",
+    "slug": "al-mutakabbir"
+  },
+  {
+    "id": 11,
+    "text_latin": "Al Khaliq",
+    "text_ar": "الخالق",
+    "translate_id": "Yang Maha Pencipta",
+    "slug": "al-khaliq"
+  },
+  {
+    "id": 12,
+    "text_latin": "Al Baari'",
+    "text_ar": "البارئ",
+    "translate_id": "Yang Maha Melepaskan(Membuat, Membentuk, Menyeimbangkan)",
+    "slug": "al-baari'"
+  },
+  {
+    "id": 13,
+    "text_latin": "Al Mushawwir",
+    "text_ar": "المصور",
+    "translate_id": "Yang Maha Membentuk Rupa(makhluknya)",
+    "slug": "al-mushawwir"
+  },
+  {
+    "id": 14,
+    "text_latin": "Al Ghaffaar",
+    "text_ar": "الغفار",
+    "translate_id": "Yang Maha Pengampun",
+    "slug": "al-ghaffaar"
+  },
+  {
+    "id": 15,
+    "text_latin": "Al Qahhaar",
+    "text_ar": "القهار",
+    "translate_id": "Yang Maha Memaksa",
+    "slug": "al-qahhaar"
+  },
+  {
+    "id": 16,
+    "text_latin": "Al Wahhaab",
+    "text_ar": "الوهاب",
+    "translate_id": "Yang Maha Pemberi Karunia",
+    "slug": "al-wahhaab"
+  },
+  {
+    "id": 17,
+    "text_latin": "Ar Razzaaq",
+    "text_ar": "الرزاق",
+    "translate_id": "Yang Maha Pemberi Rezeki",
+    "slug": "ar-razzaaq"
+  },
+  {
+    "id": 18,
+    "text_latin": "Al Fattaah",
+    "text_ar": "الفتاح",
+    "translate_id": "Yang Maha Pembuka Rahmat",
+    "slug": "al-fattaah"
+  },
+  {
+    "id": 19,
+    "text_latin": "Al 'Aliim",
+    "text_ar": "العليم",
+    "translate_id": "Yang Maha Mengetahui(Memiliki Ilmu)",
+    "slug": "al-'aliim"
+  },
+  {
+    "id": 20,
+    "text_latin": "Al Qaabidh",
+    "text_ar": "القابض",
+    "translate_id": "Yang Maha Menyempitkan(makhluknya)",
+    "slug": "al-qaabidh"
+  },
+  {
+    "id": 21,
+    "text_latin": "Al Baasith",
+    "text_ar": "الباسط",
+    "translate_id": "Yang Maha Melapangkan(makhluknya)",
+    "slug": "al-baasith"
+  },
+  {
+    "id": 22,
+    "text_latin": "Al Khaafidh",
+    "text_ar": "الخافض",
+    "translate_id": "Yang Maha Merendahkan(makhluknya)",
+    "slug": "al-khaafidh"
+  },
+  {
+    "id": 23,
+    "text_latin": "Ar Raafi'",
+    "text_ar": "الرافع",
+    "translate_id": "Yang Maha Meninggikan(makhluknya)",
+    "slug": "ar-raafi'"
+  },
+  {
+    "id": 24,
+    "text_latin": "Al Mu'izz",
+    "text_ar": "المعز",
+    "translate_id": "Yang Maha Memuliakan(makhluknya)",
+    "slug": "al-mu'izz"
+  },
+  {
+    "id": 25,
+    "text_latin": "Al Mudzil",
+    "text_ar": "المذل",
+    "translate_id": "Yang Maha Menghinakan(makhluknya)",
+    "slug": "al-mudzil"
+  },
+  {
+    "id": 26,
+    "text_latin": "Al Samii'",
+    "text_ar": "السميع",
+    "translate_id": "Yang Maha Mendengar",
+    "slug": "al-samii'"
+  },
+  {
+    "id": 27,
+    "text_latin": "Al Bashiir",
+    "text_ar": "البصير",
+    "translate_id": "Yang Maha Melihat",
+    "slug": "al-bashiir"
+  },
+  {
+    "id": 28,
+    "text_latin": "Al Hakam",
+    "text_ar": "الحكم",
+    "translate_id": "Yang Maha Menetapkan",
+    "slug": "al-hakam"
+  },
+  {
+    "id": 29,
+    "text_latin": "Al 'Adl",
+    "text_ar": "العدل",
+    "translate_id": "Yang Maha Adil",
+    "slug": "al-'adl"
+  },
+  {
+    "id": 30,
+    "text_latin": "Al Lathiif",
+    "text_ar": "اللطيف",
+    "translate_id": "Yang Maha Lembut",
+    "slug": "al-lathiif"
+  },
+  {
+    "id": 31,
+    "text_latin": "Al Khabiir",
+    "text_ar": "الخبير",
+    "translate_id": "Yang Maha Mengenal",
+    "slug": "al-khabiir"
+  },
+  {
+    "id": 32,
+    "text_latin": "Al Haliim",
+    "text_ar": "الحليم",
+    "translate_id": "Yang Maha Penyantun",
+    "slug": "al-haliim"
+  },
+  {
+    "id": 33,
+    "text_latin": "Al 'Azhiim",
+    "text_ar": "العظيم",
+    "translate_id": "Yang Maha Agung",
+    "slug": "al-'azhiim"
+  },
+  {
+    "id": 34,
+    "text_latin": "Al Ghafuur",
+    "text_ar": "الغفور",
+    "translate_id": "Yang Maha Pengampun",
+    "slug": "al-ghafuur"
+  },
+  {
+    "id": 35,
+    "text_latin": "As Syakuur",
+    "text_ar": "الشكور",
+    "translate_id": "Yang Maha Pembalas Budi(Menghargai)",
+    "slug": "as-syakuur"
+  },
+  {
+    "id": 36,
+    "text_latin": "Al 'Aliy",
+    "text_ar": "العلى",
+    "translate_id": "Yang Maha Tinggi",
+    "slug": "al-'aliy"
+  },
+  {
+    "id": 37,
+    "text_latin": "Al Kabiir",
+    "text_ar": "الكبير",
+    "translate_id": "Yang Maha Besar",
+    "slug": "al-kabiir"
+  },
+  {
+    "id": 38,
+    "text_latin": "Al Hafizh",
+    "text_ar": "الحفيظ",
+    "translate_id": "Yang Maha Memelihara",
+    "slug": "al-hafizh"
+  },
+  {
+    "id": 39,
+    "text_latin": "Al Muqiit",
+    "text_ar": "المقيت",
+    "translate_id": "Yang Maha Pemberi Kecukupan",
+    "slug": "al-muqiit"
+  },
+  {
+    "id": 40,
+    "text_latin": "Al Hasiib",
+    "text_ar": "الحسيب",
+    "translate_id": "Yang Maha Membuat Perhitungan",
+    "slug": "al-hasiib"
+  },
+  {
+    "id": 41,
+    "text_latin": "Al Jaliil",
+    "text_ar": "الجليل",
+    "translate_id": "Yang Maha Mulia",
+    "slug": "al-jaliil"
+  },
+  {
+    "id": 42,
+    "text_latin": "Al Kariim",
+    "text_ar": "الكريم",
+    "translate_id": "Yang Maha Mulia",
+    "slug": "al-kariim"
+  },
+  {
+    "id": 43,
+    "text_latin": "Ar Raqiib",
+    "text_ar": "الرقيب",
+    "translate_id": "Yang Maha Mengawasi",
+    "slug": "ar-raqiib"
+  },
+  {
+    "id": 44,
+    "text_latin": "Al Mujiib",
+    "text_ar": "المجيب",
+    "translate_id": "Yang Maha Mengabulkan",
+    "slug": "al-mujiib"
+  },
+  {
+    "id": 45,
+    "text_latin": "Al Waasi'",
+    "text_ar": "الواسع",
+    "translate_id": "Yang Maha Luas",
+    "slug": "al-waasi'"
+  },
+  {
+    "id": 46,
+    "text_latin": "Al Hakiim",
+    "text_ar": "الحكيم",
+    "translate_id": "Yang Maha Maka Bijaksana",
+    "slug": "al-hakiim"
+  },
+  {
+    "id": 47,
+    "text_latin": "Al Waduud",
+    "text_ar": "الودود",
+    "translate_id": "Yang Maha Mengasihi",
+    "slug": "al-waduud"
+  },
+  {
+    "id": 48,
+    "text_latin": "Al Majiid",
+    "text_ar": "المجيد",
+    "translate_id": "Yang Maha Mulia",
+    "slug": "al-majiid"
+  },
+  {
+    "id": 49,
+    "text_latin": "Al Baa'its",
+    "text_ar": "الباعث",
+    "translate_id": "Yang Maha Membangkitkan",
+    "slug": "al-baa'its"
+  },
+  {
+    "id": 50,
+    "text_latin": "As Syahiid",
+    "text_ar": "الشهيد",
+    "translate_id": "Yang Maha Menyaksikan",
+    "slug": "as-syahiid"
+  },
+  {
+    "id": 51,
+    "text_latin": "Al Haqq",
+    "text_ar": "الحق",
+    "translate_id": "Yang Maha Benar",
+    "slug": "al-haqq"
+  },
+  {
+    "id": 52,
+    "text_latin": "Al Wakiil",
+    "text_ar": "الوكيل",
+    "translate_id": "Yang Maha Memelihara",
+    "slug": "al-wakiil"
+  },
+  {
+    "id": 53,
+    "text_latin": "Al Qawiyyu",
+    "text_ar": "القوى",
+    "translate_id": "Yang Maha Kuat",
+    "slug": "al-qawiyyu"
+  },
+  {
+    "id": 54,
+    "text_latin": "Al Matiin",
+    "text_ar": "المتين",
+    "translate_id": "Yang Maha Kokoh",
+    "slug": "al-matiin"
+  },
+  {
+    "id": 55,
+    "text_latin": "Al Waliyy",
+    "text_ar": "الولى",
+    "translate_id": "Yang Maha Melindungi",
+    "slug": "al-waliyy"
+  },
+  {
+    "id": 56,
+    "text_latin": "Al Hamiid",
+    "text_ar": "الحميد",
+    "translate_id": "Yang Maha Terpuji",
+    "slug": "al-hamiid"
+  },
+  {
+    "id": 57,
+    "text_latin": "Al Muhshii",
+    "text_ar": "المحصى",
+    "translate_id": "Yang Maha Mengalkulasi(Menghitung Segala Sesuatu)",
+    "slug": "al-muhshii"
+  },
+  {
+    "id": 58,
+    "text_latin": "Al Mubdi'",
+    "text_ar": "المبدئ",
+    "translate_id": "Yang Maha Memulai",
+    "slug": "al-mubdi'"
+  },
+  {
+    "id": 59,
+    "text_latin": "Al Mu'iid",
+    "text_ar": "المعيد",
+    "translate_id": "Yang Maha Mengembalikan Kehidupan",
+    "slug": "al-mu'iid"
+  },
+  {
+    "id": 60,
+    "text_latin": "Al Muhyii",
+    "text_ar": "المحيى",
+    "translate_id": "Yang Maha Menghidupkan",
+    "slug": "al-muhyii"
+  },
+  {
+    "id": 61,
+    "text_latin": "Al Mumiitu",
+    "text_ar": "المميت",
+    "translate_id": "Yang Maha Mematikan",
+    "slug": "al-mumiitu"
+  },
+  {
+    "id": 62,
+    "text_latin": "Al Hayyu",
+    "text_ar": "الحي",
+    "translate_id": "Yang Maha Hidup",
+    "slug": "al-hayyu"
+  },
+  {
+    "id": 63,
+    "text_latin": "Al Qayyuum",
+    "text_ar": "القيوم",
+    "translate_id": "Yang Maha Mandiri",
+    "slug": "al-qayyuum"
+  },
+  {
+    "id": 64,
+    "text_latin": "Al Waajid",
+    "text_ar": "الواجد",
+    "translate_id": "Yang Maha Penemu",
+    "slug": "al-waajid"
+  },
+  {
+    "id": 65,
+    "text_latin": "Al Maajid",
+    "text_ar": "الماجد",
+    "translate_id": "Yang Maha Mulia",
+    "slug": "al-maajid"
+  },
+  {
+    "id": 66,
+    "text_latin": "Al Wahiid",
+    "text_ar": "الواحد",
+    "translate_id": "Yang Maha Tunggal",
+    "slug": "al-wahiid"
+  },
+  {
+    "id": 67,
+    "text_latin": "Al Ahad",
+    "text_ar": "الاحد",
+    "translate_id": "Yang Maha Esa",
+    "slug": "al-ahad"
+  },
+  {
+    "id": 68,
+    "text_latin": "As Shamad",
+    "text_ar": "الصمد",
+    "translate_id": "Yang Maha Dibutuhkan, Tempat Meminta",
+    "slug": "as-shamad"
+  },
+  {
+    "id": 69,
+    "text_latin": "Al Qaadir",
+    "text_ar": "القادر",
+    "translate_id": "Yang Maha Menentukan, Maha Menyeimbangkan",
+    "slug": "al-qaadir"
+  },
+  {
+    "id": 70,
+    "text_latin": "Al Muqtadir",
+    "text_ar": "المقتدر",
+    "translate_id": "Yang Maha Berkuasa",
+    "slug": "al-muqtadir"
+  },
+  {
+    "id": 71,
+    "text_latin": "Al Muqaddim",
+    "text_ar": "المقدم",
+    "translate_id": "Yang Maha Mendahulukan",
+    "slug": "al-muqaddim"
+  },
+  {
+    "id": 72,
+    "text_latin": "Al Mu 'akkhir",
+    "text_ar": "المؤخر",
+    "translate_id": "Yang Maha Mengakhirkan",
+    "slug": "al-mu-'akkhir"
+  },
+  {
+    "id": 73,
+    "text_latin": "Al Awwal",
+    "text_ar": "الأول",
+    "translate_id": "Yang Maha Awal",
+    "slug": "al-awwal"
+  },
+  {
+    "id": 74,
+    "text_latin": "Al Aakhir",
+    "text_ar": "الأخر",
+    "translate_id": "Yang Maha Akhir",
+    "slug": "al-aakhir"
+  },
+  {
+    "id": 75,
+    "text_latin": "Az Zhaahir",
+    "text_ar": "الظاهر",
+    "translate_id": "Yang Maha Nyata",
+    "slug": "az-zhaahir"
+  },
+  {
+    "id": 76,
+    "text_latin": "Al Baathin",
+    "text_ar": "الباطن",
+    "translate_id": "Yang Maha Ghaib",
+    "slug": "al-baathin"
+  },
+  {
+    "id": 77,
+    "text_latin": "Al Waali",
+    "text_ar": "الوالي",
+    "translate_id": "Yang Maha Memerintah",
+    "slug": "al-waali"
+  },
+  {
+    "id": 78,
+    "text_latin": "Al Muta'aalii",
+    "text_ar": "المتعالي",
+    "translate_id": "Yang Maha Tinggi",
+    "slug": "al-muta'aalii"
+  },
+  {
+    "id": 79,
+    "text_latin": "Al Barru",
+    "text_ar": "البر",
+    "translate_id": "Yang Maha Penderma(Maha Pemberi Kebajikan)",
+    "slug": "al-barru"
+  },
+  {
+    "id": 80,
+    "text_latin": "At Tawwaab",
+    "text_ar": "التواب",
+    "translate_id": "Yang Maha Penerima Tobat",
+    "slug": "at-tawwaab"
+  },
+  {
+    "id": 81,
+    "text_latin": "Al Muntaqim",
+    "text_ar": "المنتقم",
+    "translate_id": "Yang Maha Pemberi Balasan",
+    "slug": "al-muntaqim"
+  },
+  {
+    "id": 82,
+    "text_latin": "Al Afuww",
+    "text_ar": "العفو",
+    "translate_id": "Yang Maha Pemaaf",
+    "slug": "al-afuww"
+  },
+  {
+    "id": 83,
+    "text_latin": "Ar Ra'uuf",
+    "text_ar": "الرؤوف",
+    "translate_id": "Yang Maha Pengasuh",
+    "slug": "ar-ra'uuf"
+  },
+  {
+    "id": 84,
+    "text_latin": "Malikul Mulk",
+    "text_ar": "مالك الملك",
+    "translate_id": "Yang Maha Penguasa Kerajaan(Semesta)",
+    "slug": "malikul-mulk"
+  },
+  {
+    "id": 85,
+    "text_latin": "Dzul Jalaali Wal Ikraam",
+    "text_ar": "ذو الجلال و الإكرام",
+    "translate_id": "Yang Maha Pemilik Kebesaran dan Kemuliaan",
+    "slug": "dzul-jalaali-wal-ikraam"
+  },
+  {
+    "id": 86,
+    "text_latin": "Al Muqsith",
+    "text_ar": "المقسط",
+    "translate_id": "Yang Maha Pemberi Keadilan",
+    "slug": "al-muqsith"
+  },
+  {
+    "id": 87,
+    "text_latin": "Al Jamii'",
+    "text_ar": "الجامع",
+    "translate_id": "Yang Maha Mengumpulkan",
+    "slug": "al-jamii'"
+  },
+  {
+    "id": 88,
+    "text_latin": "Al Ghaniyy",
+    "text_ar": "الغنى",
+    "translate_id": "Yang Maha Kaya",
+    "slug": "al-ghaniyy"
+  },
+  {
+    "id": 89,
+    "text_latin": "Al Mughnii",
+    "text_ar": "المغنى",
+    "translate_id": "Yang Maha Pemberi Kekayaan",
+    "slug": "al-mughnii"
+  },
+  {
+    "id": 90,
+    "text_latin": "Al Maani",
+    "text_ar": "المانع",
+    "translate_id": "Yang Maha Mencegah",
+    "slug": "al-maani"
+  },
+  {
+    "id": 91,
+    "text_latin": "Ad Dhaar",
+    "text_ar": "الضار",
+    "translate_id": "Yang Maha Penimpa Kemudharatan",
+    "slug": "ad-dhaar"
+  },
+  {
+    "id": 92,
+    "text_latin": "An Nafii'",
+    "text_ar": "النافع",
+    "translate_id": "Yang Maha Memberi Manfaat",
+    "slug": "an-nafii'"
+  },
+  {
+    "id": 93,
+    "text_latin": "An Nuur",
+    "text_ar": "النور",
+    "translate_id": "Yang Maha Bercahaya(Menerangi, Memberi Cahaya)",
+    "slug": "an-nuur"
+  },
+  {
+    "id": 94,
+    "text_latin": "Al Haadii",
+    "text_ar": "الهادئ",
+    "translate_id": "Yang Maha Pemberi Petunjuk",
+    "slug": "al-haadii"
+  },
+  {
+    "id": 95,
+    "text_latin": "Al Badii'",
+    "text_ar": "البديع",
+    "translate_id": "Yang Maha Pencipta Yang Tiada Bandingannya",
+    "slug": "al-badii'"
+  },
+  {
+    "id": 96,
+    "text_latin": "Al Baaqii",
+    "text_ar": "الباقي",
+    "translate_id": "Yang Maha Kekal",
+    "slug": "al-baaqii"
+  },
+  {
+    "id": 97,
+    "text_latin": "Al Waarits",
+    "text_ar": "الوارث",
+    "translate_id": "Yang Maha Pewaris",
+    "slug": "al-waarits"
+  },
+  {
+    "id": 98,
+    "text_latin": "Ar Rasyiid",
+    "text_ar": "الرشيد",
+    "translate_id": "Yang Maha Pandai",
+    "slug": "ar-rasyiid"
+  },
+  {
+    "id": 99,
+    "text_latin": "As Shabuur",
+    "text_ar": "الصبور",
+    "translate_id": "Yang Maha Sabar",
+    "slug": "as-shabuur"
+  }
+]

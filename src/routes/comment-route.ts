@@ -12,11 +12,11 @@ commentRoute
       let page = Number(req.query.page) || 1;
       let limit = Number(req.query.limit) || 50;
 
-      if (limit < 20 || limit > 100) {
+      if (limit < 10 || limit > 100) {
         return res.status(400).json(
           jsonError({
             code: 400,
-            error: `limit must be between 20 and 100!`,
+            error: `limit must be between 10 and 100!`,
           })
         );
       }

@@ -17,6 +17,7 @@ import asmaulHusnaRoute from "./routes/asmaul-husna-route";
 
 import { api_meta } from "../config";
 import commentRoute from "./routes/comment-route";
+import alQuranRoute from "./routes/al-quran-route";
 
 const app = express();
 
@@ -71,6 +72,9 @@ app.use("/v1/prayer", doaRouter);
 
 // route for asmaul husna
 app.use("/v1/asmaul-husna", asmaulHusnaRoute);
+
+// route for al-quran
+app.use("/v1/al-quran", alQuranRoute);
 
 // route for comment
 app.use("/v1/comments", commentRoute);

@@ -6,3 +6,7 @@ export const AxiosApiMyQuran = axios.create({
 export const AxiosApiEQuran = axios.create({
   baseURL: "https://equran.id/api/v2/",
 });
+
+export const AxiosApiQuran = axios.create({
+  baseURL: "https://api.quran.com/api/v4",
+});
